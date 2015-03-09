@@ -1,0 +1,30 @@
+{
+  "name": "storage-native",
+  "version": "0.0.1",
+  "description": "Save and retrieve native javascript types in localStorage and sessionStorage",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jshint . && browserify test/storageNative.js | testling",
+    "build": "browserify src/index.js --standalone storageNative | uglifyjs > dist/storageNative.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustinhayes/storage-native.git"
+  },
+  "author": "Dustin Hayes <dustinmichaelh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dustinhayes/storage-native/issues"
+  },
+  "homepage": "https://github.com/dustinhayes/storage-native",
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "jshint": "^2.6.3",
+    "tape": "^3.5.0",
+    "testling": "^1.7.1",
+    "uglify-js": "^2.4.16"
+  },
+  "dependencies": {
+    "json-native": "0.0.4"
+  }
+}
