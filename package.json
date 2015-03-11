@@ -1,6 +1,6 @@
 {
   "name": "storage-native",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Save and retrieve native javascript types in localStorage and sessionStorage",
   "main": "src/index.js",
   "scripts": {

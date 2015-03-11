@@ -2,14 +2,13 @@
 
 var jn = require('json-native');
 
-module.exports = function (t) {
-  t = window[t + 'Storage'];
+module.exports = function (s) {
   return {
-    key: t.key,
-    clear: t.clear,
-    length: t.length,
-    removeItem: t.removeItem,
-    getItem: function (k) { return jn.parse(t.getItem(k)); },
-    setItem: function (k, v) { t.setItem(k, jn.stringify(v)); }
+    key: s.key,
+    clear: s.clear,
+    length: s.length,
+    removeItem: s.removeItem,
+    getItem: function (k) { return jn.parse(s.getItem(k)); },
+    setItem: function (k, v) { s.setItem(k, jn.stringify(v)); }
   };
 };
