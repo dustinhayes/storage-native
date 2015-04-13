@@ -4,7 +4,7 @@
   "description": "Save and retrieve native javascript types in localStorage and sessionStorage",
   "main": "src/index.js",
   "scripts": {
-    "test": "jshint . && browserify test/storageNative.js | testling",
+    "test": "jshint . && zuul -- test/index.js",
     "build": "browserify src/index.js --standalone storageNative | uglifyjs > dist/storageNative.js"
   },
   "repository": {
@@ -21,8 +21,8 @@
     "browserify": "^9.0.3",
     "jshint": "^2.6.3",
     "tape": "^3.5.0",
-    "testling": "^1.7.1",
-    "uglify-js": "^2.4.16"
+    "uglify-js": "^2.4.16",
+    "zuul": "^2.1.1"
   },
   "dependencies": {
     "json-native": "0.0.4"
