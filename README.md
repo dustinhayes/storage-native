@@ -1,5 +1,9 @@
 # storage-native
 
+[![Build Status](https://travis-ci.org/dustinhayes/storage-native.svg?branch=master)](https://travis-ci.org/dustinhayes/storage-native)
+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/dh--storage-native.svg)](https://saucelabs.com/u/dh--storage-native)
+
 > Save and retrieve native javascript types in localStorage and sessionStorage
 
 storage-native is a small, focused library that allows you to save and retrieve native javascript types (Dates, RegExp and Functions) in localStorage and sessionStorage. https://developer.mozilla.org/en-US/docs/Web/API/Storage
