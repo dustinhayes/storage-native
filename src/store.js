@@ -8,7 +8,12 @@ module.exports = function (s) {
     clear: s.clear,
     length: s.length,
     removeItem: s.removeItem,
-    getItem: function (k) { return jn.parse(s.getItem(k)); },
-    setItem: function (k, v) { s.setItem(k, jn.stringify(v)); }
+    getItem: function (k) {
+      try { return jn.parse(s.getItem(k)); }
+      catch (e) { return s.getItem(k); }
+    },
+    setItem: function (k, v) {
+      s.setItem(k, typeof v === 'string' ? v : jn.stringify(v));
+    }
   };
 };
